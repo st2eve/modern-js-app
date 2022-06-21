@@ -1,0 +1,23 @@
+{
+  "name": "modern-js-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/st2eve/modern-js-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/st2eve/modern-js-app/issues"
+  },
+  "homepage": "https://github.com/st2eve/modern-js-app#readme",
+  "devDependencies": {
+    "parcel": "^2.6.1"
+  }
+}
