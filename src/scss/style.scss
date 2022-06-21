@@ -1,0 +1,193 @@
+body{
+    
+    main{
+        max-width: 850px;
+        min-width: 450px;
+        margin: auto;
+        display: grid;
+
+        h1{
+            text-align: center;
+        }
+
+        .main__button-compare{
+            width: 30px;
+            height: 36px;
+            border-radius: 15px;
+            justify-self: end;
+            margin-top: -438px;
+            display: none;
+        }
+
+        .main__button-compare:hover{
+            width: 105px;
+        }
+
+        .main__block-compare{
+            min-height: 390px;
+            margin-top: 50px;
+            border-radius: 15px;
+            border: 3px solid black;
+            box-shadow: 5px 5px black;
+            background-color: rgba(231, 231, 231, 0.5);
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            display: none;
+
+            .compare__form-cityOne{
+                margin-top: 10%;
+                text-align: center;
+
+                .form__input-cityOne{
+                    border-radius: 15px;
+                    width: 60%;
+                    height: 30px;
+                }
+                .form__input-buttonOne-compare{
+                    @extend .form__input-cityOne;
+                    width: 30%;
+                    min-width: 70px;
+                    margin-top: 1%;
+                }
+            }
+
+            .compare__form-cityTwo{
+                @extend .compare__form-cityOne;
+                
+
+                .form__input-cityTwo{
+                    border-radius: 15px;
+                    width: 60%;
+                    height: 30px;
+                }
+                .form__input-buttonTwo-compare{
+                    @extend .form__input-cityTwo;
+                    width: 30%;
+                    min-width: 70px;
+                    margin-top: 1%;
+                }
+            }
+        }
+
+        .main__container{
+            min-height: 390px;
+            border: 3px solid black;
+            margin-top: 50px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2rem;
+            background-image: url('https://i.gifer.com/NSu6.gif');
+            background-repeat: no-repeat; 
+            background-size: cover;
+            border-radius: 15px;
+            box-shadow: 5px 5px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+
+            .container__form{
+                max-width: 100%;
+                margin: 0;
+                padding-top: 5%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                //background-color: rgb(0, 0, 0, 0.2);
+                border-radius: 15px 15px 0 0;
+
+                .form__input-text{
+                    width: 50%;
+                    height: 30px;
+                    border-radius: 15px;
+                }
+                .form__input-button{
+                    width: 20%;
+                    min-width: 70px;
+                    height: 36px;
+                    border-radius: 15px;
+                }
+            }
+            .container__weather{
+                max-width: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                //background-color: rgb(0, 0, 0, 0.2);
+                border-radius: 0 0 15px 15px;
+
+                .weather__temp{
+                    margin: 0;
+                    width: 45%;
+                    height: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .weather__city{
+                    @extend .weather__temp;
+                }
+                .weather__infos{
+                    width: 90%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    margin: 0;
+
+                    .infos__desc{
+                        width: 45%;
+                        height: 100px;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        text-align: center
+                    }
+
+                    .infos__wind{
+                        @extend .infos__desc;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    .infos__nextdays{
+                        width:100px;
+                        height: 200px;
+                        font-size: 0.9rem;
+                        margin: 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        text-align: center;
+
+                        .nextdays__desc{
+                            margin: 0;
+                            height: 50px;
+                        }
+
+                        img{
+                            width:50%;
+                            height: 30%;
+                            margin-bottom: 30%;
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .main__charts{
+            position: relative;
+            margin: auto;
+            height: 60%;
+            width: 80%;
+        }
+
+    }
+}
+
