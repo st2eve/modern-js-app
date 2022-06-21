@@ -1,0 +1,180 @@
+body main {
+  max-width: 850px;
+  min-width: 450px;
+  margin: auto;
+  display: grid;
+}
+
+body main h1 {
+  text-align: center;
+}
+
+body main .main__button-compare {
+  width: 30px;
+  height: 36px;
+  border-radius: 15px;
+  justify-self: end;
+  margin-top: -438px;
+  display: none;
+}
+
+body main .main__button-compare:hover {
+  width: 105px;
+}
+
+body main .main__block-compare {
+  min-height: 390px;
+  color: #000;
+  background-color: #e7e7e780;
+  border: 3px solid #000;
+  border-radius: 15px;
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  display: none;
+  box-shadow: 5px 5px #000;
+}
+
+body main .main__block-compare .compare__form-cityOne, body main .main__block-compare .compare__form-cityTwo {
+  text-align: center;
+  margin-top: 10%;
+}
+
+body main .main__block-compare .compare__form-cityOne .form__input-cityOne, body main .main__block-compare .compare__form-cityTwo .form__input-cityOne, body main .main__block-compare .compare__form-cityOne .form__input-buttonOne-compare, body main .main__block-compare .compare__form-cityTwo .form__input-buttonOne-compare {
+  width: 60%;
+  height: 30px;
+  border-radius: 15px;
+}
+
+body main .main__block-compare .compare__form-cityOne .form__input-buttonOne-compare, body main .main__block-compare .compare__form-cityTwo .form__input-buttonOne-compare {
+  width: 30%;
+  min-width: 70px;
+  margin-top: 1%;
+}
+
+body main .main__block-compare .compare__form-cityTwo .form__input-cityTwo, body main .main__block-compare .compare__form-cityTwo .form__input-buttonTwo-compare {
+  width: 60%;
+  height: 30px;
+  border-radius: 15px;
+}
+
+body main .main__block-compare .compare__form-cityTwo .form__input-buttonTwo-compare {
+  width: 30%;
+  min-width: 70px;
+  margin-top: 1%;
+}
+
+body main .main__container {
+  min-height: 390px;
+  color: #fff;
+  background-image: url("https://i.gifer.com/NSu6.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid #000;
+  border-radius: 15px;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  display: flex;
+  box-shadow: 5px 5px #000;
+}
+
+body main .main__container .container__form {
+  max-width: 100%;
+  border-radius: 15px 15px 0 0;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding-top: 5%;
+  display: flex;
+}
+
+body main .main__container .container__form .form__input-text {
+  width: 50%;
+  height: 30px;
+  border-radius: 15px;
+}
+
+body main .main__container .container__form .form__input-button {
+  width: 20%;
+  min-width: 70px;
+  height: 36px;
+  border-radius: 15px;
+}
+
+body main .main__container .container__weather {
+  max-width: 100%;
+  border-radius: 0 0 15px 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  display: flex;
+}
+
+body main .main__container .container__weather .weather__temp, body main .main__container .container__weather .weather__city {
+  width: 45%;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+}
+
+body main .main__container .container__weather .weather__infos {
+  width: 90%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0;
+  display: flex;
+}
+
+body main .main__container .container__weather .weather__infos .infos__desc, body main .main__container .container__weather .weather__infos .infos__wind {
+  width: 45%;
+  height: 100px;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  display: flex;
+}
+
+body main .main__container .container__weather .weather__infos .infos__wind {
+  justify-content: center;
+  margin: 0;
+  display: flex;
+}
+
+body main .main__container .container__weather .weather__infos .infos__nextdays {
+  width: 100px;
+  height: 200px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  font-size: .9rem;
+  display: flex;
+}
+
+body main .main__container .container__weather .weather__infos .infos__nextdays .nextdays__desc {
+  height: 50px;
+  margin: 0;
+}
+
+body main .main__container .container__weather .weather__infos .infos__nextdays img {
+  width: 50%;
+  height: 30%;
+  margin-bottom: 30%;
+  display: none;
+}
+
+body main .main__charts {
+  height: 60%;
+  width: 80%;
+  margin: auto;
+  position: relative;
+}
+
+/*# sourceMappingURL=index.1f369520.css.map */
