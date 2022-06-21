@@ -1,31 +1,22 @@
 /* ------------------------------ Constantes principales ------------------------------ */
-const selectMainContainer = document.querySelector('.main__container')
 const selectContainerForm = document.querySelector('.container__form')
-const selectFormInputText = document.querySelector('.form__input-text')
 const selectFormInputButton = document.querySelector('.form__input-button')
-const selectContainerWeather = document.querySelector('.container__weather')
-const selectWeatherTemp = document.querySelector('.weather__temp')
-const selectWeatherCity = document.querySelector('.weather__city')
-const selectWeatherInfos = document.querySelector('.weather__infos')
-const selectButtonCompare = document.querySelector('.main__button-compare')
-const selectBlockCompare = document.querySelector('.main__block-compare')
 const selectCityOne = document.querySelector('.form__input-cityOne')
 const selectCityTwo = document.querySelector('.form__input-cityTwo')
 const selectButtonCityOne = document.querySelector('.form__input-buttonOne-compare')
 const selectButtonCityTwo = document.querySelector('.form__input-buttonTwo-compare')
-const selectMain = document.querySelector('main')
-const apiKey = '7692fdfcc503a7509f924505444ba26a'
+const selectButtonCompare = document.querySelector('.main__button-compare')
 let cityName = ""
 let cityNameOne = ""
 let cityNameTwo = ""
-const imgClass = ['infos__clear', 'infos__clouds', 'infos__abitclouds', 'infos__mist', 'infos__snow', 'infos__thunder', 'infos__rain']
-const imgSrc = ['src/img/sun.png', 'src/img/clouds.png', 'src/img/abitclouds.png', 'src/img/mist.png', 'src/img/snow.png', 'src/img/thunder.png', 'src/img/rain.png']
 /* ------------------------------ Constantes principales ------------------------------ */
 
 
 
 /* ------------------------------ Forecast ------------------------------ */
 function getForecast(){
+
+    const apiKey = '7692fdfcc503a7509f924505444ba26a'
 
     getCityName()
 
@@ -50,12 +41,17 @@ function getForecast(){
             createForDesc.innerHTML = recupForcastDesc
             createArticle.appendChild(createForDesc)
 
+            const imgClass = ['infos__clear', 'infos__clouds', 'infos__abitclouds', 'infos__mist', 'infos__snow', 'infos__thunder', 'infos__rain']
+            const imgSrc = ['src/img/sun.png', 'src/img/clouds.png', 'src/img/abitclouds.png', 'src/img/mist.png', 'src/img/snow.png', 'src/img/thunder.png', 'src/img/rain.png']
+
             for(let j = 0; j < imgClass.length; j++){
                 let creatImg = document.createElement('img')
                 creatImg.setAttribute('class', imgClass[j])
                 creatImg.setAttribute('src', imgSrc[j])
                 createArticle.appendChild(creatImg)   
             }
+
+            const selectWeatherInfos = document.querySelector('.weather__infos')
 
             selectWeatherInfos.appendChild(createArticle)
 
@@ -97,7 +93,8 @@ function getCityName(){
 
     resetContent()
 
-
+    const selectFormInputText = document.querySelector('.form__input-text')
+    const apiKey = '7692fdfcc503a7509f924505444ba26a'
     cityName = selectFormInputText.value
 
 
@@ -109,6 +106,8 @@ function getCityName(){
         let recupTemp = data['main']['temp']
         let recupWind = data['wind']['speed']
 
+        const selectWeatherInfos = document.querySelector('.weather__infos')
+
         let createPWind = document.createElement('p')
         createPWind.setAttribute('class', 'infos__wind')
         createPWind.innerHTML = `Vent : ${Math.round(recupWind*3.6)} km/h`
@@ -119,8 +118,13 @@ function getCityName(){
         createPDesc.innerHTML = recupDesc
         selectWeatherInfos.prepend(createPDesc)
 
+        const selectWeatherTemp = document.querySelector('.weather__temp')
+        const selectWeatherCity = document.querySelector('.weather__city')
+
         selectWeatherTemp.innerHTML = `${recupTemp} °c`
         selectWeatherCity.innerHTML = recupName
+
+        const selectMainContainer = document.querySelector('.main__container')
 
         if(recupDesc == 'couvert' || recupDesc == 'nuageux' || recupDesc == 'partiellement nuageux'){
             selectMainContainer.setAttribute('style', 'background-image: url("https://i.gifer.com/srG.gif"); background-repeat: no-repeat; background-size: cover;')
@@ -148,6 +152,10 @@ function getCityName(){
 
 /* ------------------------------ reset for update content ------------------------------ */
 function resetContent(){
+
+    const selectWeatherTemp = document.querySelector('.weather__temp')
+    const selectWeatherCity = document.querySelector('.weather__city')
+
     selectWeatherTemp.innerHTML = ""
     selectWeatherCity.innerHTML = ""
 
@@ -171,6 +179,9 @@ function resetContent(){
 
 /* ------------------------------ reset for update compare ------------------------------ */
 function displayCompareAndTitle(){
+
+    const selectBlockCompare = document.querySelector('.main__block-compare')
+
     if(selectBlockCompare.getAttribute('style') != null){
         selectButtonCompare.setAttribute('style', 'display: none')
     }else{
@@ -243,6 +254,7 @@ function updateCharts(){
 function cityCompareOne(){
 
     cityNameOne = selectCityOne.value
+    const apiKey = '7692fdfcc503a7509f924505444ba26a'
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityNameOne}&appid=${apiKey}&units=metric&lang=fr`)
     .then(response => response.json())
@@ -283,6 +295,7 @@ function cityCompareOne(){
 function cityCompareTwo(){
 
     cityNameTwo = selectCityTwo.value
+    const apiKey = '7692fdfcc503a7509f924505444ba26a'
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityNameTwo}&appid=${apiKey}&units=metric&lang=fr`)
     .then(response => response.json())
@@ -321,6 +334,9 @@ function cityCompareTwo(){
 
 /* ------------------------------ style for block City Compare ------------------------------ */
 function cityCompareDisplay(){
+
+    const selectMain = document.querySelector('main')
+    const selectBlockCompare = document.querySelector('.main__block-compare')
 
     selectMain.setAttribute('style', 'grid-template-columns: 2fr 1fr;')
     selectButtonCompare.setAttribute('style', 'display: none')
