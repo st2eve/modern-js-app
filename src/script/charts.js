@@ -38,15 +38,4 @@ function getChart(){
 }
 /* ------------------------------ Graphique ------------------------------ */
 
-/* ------------------------------ update Graphique ------------------------------ */
-function updateCharts(){
-    const canvasRemove = document.querySelector('#myChart')
-    canvasRemove.remove()
-    const createCanvas = document.createElement('canvas')
-    createCanvas.setAttribute('id', 'myChart')
-    const selectDivCanvas = document.querySelector('.main__charts')
-    selectDivCanvas.appendChild(createCanvas)
-}
-/* ------------------------------ update Graphique ------------------------------ */
-
 export { getChart, updateCharts };
